@@ -23,7 +23,7 @@ public class GamePanel extends JPanel implements Runnable{
     public final int screenWidth = maxScreenCol * tileSize; // will make the y resolution 12 tiles high
 
     TileManager tileManager;
-    KeyHandler keyHandler = new KeyHandler();
+    KeyHandler keyHandler = new KeyHandler(this);
     Thread gameThread;
     int FPS = 60;
 
@@ -43,6 +43,12 @@ public class GamePanel extends JPanel implements Runnable{
     public Sound soundEffect = new Sound();
 
     public UI ui = new UI(this);
+
+
+    //game state
+    public int gameState;
+    public final int playState = 1;
+    public final int pauseState = 2;
 
 
     public GamePanel() {
@@ -90,13 +96,21 @@ public class GamePanel extends JPanel implements Runnable{
     public void setupGame() throws IOException {
         assetSetter.setObject();
         playMusic(0);
+        gameState = playState;
     }
 
     public void update(){
-        player.update();
+        if(gameState == playState){
+            player.update();
+
+        }
+        if(gameState == pauseState){
+            //pause menu probably
+        }
     }
     public void paintComponent(Graphics g) {
-
+        long drawStart = 0;
+        drawStart = System.nanoTime();
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
 
@@ -105,6 +119,14 @@ public class GamePanel extends JPanel implements Runnable{
         player.draw(g2d);
         ui.draw(g2d);
 
+        long drawEnd = System.nanoTime();
+        long passed = drawEnd - drawStart;
+
+        if(keyHandler.debugKey){
+            g2d.setColor(Color.WHITE);
+            g2d.drawString("Draw time :" + passed/100000 + "ms" ,10, 400);
+            System.out.println("Draw time :" + passed/100000+ "ms");
+        }
     }
 
     public void playMusic(int i){

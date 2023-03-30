@@ -4,49 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9aa1cf6-0fa1-48bd-ab77-e27d80768741" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_2DGame.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/maps/map01.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/maps/world01.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/maps/world02.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/HealthItemObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/Object.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/ObjectBoots.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object_data/boots.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object_data/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player/boy_down_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player/boy_down_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player/boy_left_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player/boy_left_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player/boy_right_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player/boy_right_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player/boy_up_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/player/boy_up_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sounds/band.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sounds/get.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tiles/earth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tiles/grass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tiles/sand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tiles/tree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tiles/wall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tiles/water.png" afterDir="false" />
+    <list default="true" id="b9aa1cf6-0fa1-48bd-ab77-e27d80768741" name="Changes" comment="&quot;working version w pause menu&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/UtilityTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/HealthItemObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/HealthItemObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +25,13 @@
       <list>
         <option value="Class" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -84,6 +58,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -138,6 +113,21 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;working version w pause menu&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;working version w pause menu&quot;" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

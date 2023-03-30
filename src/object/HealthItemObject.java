@@ -1,5 +1,8 @@
 package object;
 
+import main.GamePanel;
+import main.UtilityTool;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -11,7 +14,7 @@ public class HealthItemObject extends Object {
 
 
 
-
+    public GamePanel gamePanel;
     public static final BufferedImage icon;
 
     static {
@@ -22,15 +25,18 @@ public class HealthItemObject extends Object {
         }
     }
 
-    public HealthItemObject(int worldX, int worldY) throws IOException {
+    public HealthItemObject(int worldX, int worldY, GamePanel gamePanel) throws IOException {
         super(worldX, worldY);
         name = "healthItem";
+        this.gamePanel = gamePanel;
+
         InputStream inputStream = getClass().getResourceAsStream("/object_data/heart.png");
         if (inputStream == null) {
             throw new NullPointerException("Le fichier heart.png est introuvable dans le dossier object_data.");
         }
 
         image = ImageIO.read(inputStream);
+        UtilityTool.scaleImage(image,gamePanel.tileSize, gamePanel.tileSize);
 
     }
 
