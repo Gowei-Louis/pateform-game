@@ -9,6 +9,16 @@ public class CollisionChecker {
         this.gamePanel = gamePanel;
     }
 
+    /**
+     * On passe en parametre l'entité (entity) que l'ont veut tester pour les collisions.
+     * On va ensuite tester si l'entité est en collision en fonction de la direction de celle-ci avec une tile (tuile) comme un arbre par exemple.
+     * Si l'entité est en collision avec une tile, on va mettre la variable 'collisionOn' de l'entité à true.
+     * Si l'entité n'est pas en collision avec une tile, on va mettre la variable 'collisionOn' de l'entité à false.
+     * Donc l'entité pourra se déplacer sans bloquage.
+     *
+     *
+     * @param entity
+     */
     public void checkTile(Entity entity){
 
         // square collision box into the entity
@@ -66,6 +76,16 @@ public class CollisionChecker {
     }
 
 
+    /**
+     * On passe en parametre l'entité (entity) que l'ont veut tester pour les collisions et l'état de collision du joueur.
+     * On va ensuite pour chaque objet dans la liste gamePanel.objects tester si l'entité est en collision en fonction de la direction de celle-ci avec un objet.
+     * Si l'entité est en collision avec un objet, on va mettre la variable 'collisionOn' de l'entité à true si la propri.
+     * Si l'entité n'est pas en collision avec une tile, on va mettre la variable 'collisionOn' de l'entité à false.
+     * Donc l'entité pourra alors récuperer les objets qui seront récuperable et les désactiver.
+     * @param entity
+     * @param player
+     * @return
+     */
     public int checkObject(Entity entity, boolean player){
 
         int index = 999;
