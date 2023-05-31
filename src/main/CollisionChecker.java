@@ -2,6 +2,9 @@ package main;
 
 import entity.Entity;
 
+/**
+ * Cette classe gère les collisions dans le jeu entre les joueurs les objets et les tiles.
+ */
 public class CollisionChecker {
 
     GamePanel gamePanel;

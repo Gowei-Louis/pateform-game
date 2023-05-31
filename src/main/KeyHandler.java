@@ -3,6 +3,9 @@ package main;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/**
+ * Cette classe gère les entrées clavier du jeu.
+ */
 public class KeyHandler implements KeyListener {
 
     /**
