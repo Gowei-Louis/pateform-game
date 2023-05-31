@@ -5,66 +5,124 @@ import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
 
+    /**
+     * Indique si la touche de déplacement "haut" est enfoncée.
+     */
+    public boolean upPressed;
 
-    public boolean upPressed, downPressed, leftPressed, rightPressed = false, debugKey=false, pause=false;
+    /**
+     * Indique si la touche de déplacement "bas" est enfoncée.
+     */
+    public boolean downPressed;
+
+    /**
+     * Indique si la touche de déplacement "gauche" est enfoncée.
+     */
+    public boolean leftPressed;
+
+    /**
+     * Indique si la touche de déplacement "droite" est enfoncée.
+     */
+    public boolean rightPressed;
+
+    /**
+     * Indique si la touche de débogage est enfoncée.
+     */
+    public boolean debugKey;
+
+    /**
+     * Indique si le jeu est en pause.
+     */
+    public boolean pause;
+
+    /**
+     * Référence vers le GamePanel associé.
+     */
     GamePanel gamePanel;
 
-
-    public KeyHandler(GamePanel gamePanel){
+    /**
+     * Constructeur de la classe KeyHandler.
+     *
+     * @param gamePanel Le GamePanel associé.
+     */
+    public KeyHandler(GamePanel gamePanel) {
         this.gamePanel = gamePanel;
     }
+
     @Override
     public void keyTyped(KeyEvent e) {
-
+        // Méthode vide, pas d'action nécessaire ici.
     }
 
+    
+
+    /**
+     * Gère les actions à effectuer lorsqu'une touche est enfoncée.
+     * Cette méthode est appelée automatiquement lorsqu'une touche du clavier est enfoncée.
+     *
+     * @param e l'événement KeyEvent représentant la touche enfoncée.
+     */
     @Override
     public void keyPressed(KeyEvent e) {
         int keyCode = e.getKeyCode();
-        if(keyCode == KeyEvent.VK_Z) {
+
+        // Touche de déplacement "haut"
+        if (keyCode == KeyEvent.VK_Z) {
             upPressed = true;
         }
-        else if(keyCode == KeyEvent.VK_S) {
+        // Touche de déplacement "bas"
+        else if (keyCode == KeyEvent.VK_S) {
             downPressed = true;
         }
-        else if(keyCode == KeyEvent.VK_Q) {
+        // Touche de déplacement "gauche"
+        else if (keyCode == KeyEvent.VK_Q) {
             leftPressed = true;
         }
-        else if(keyCode == KeyEvent.VK_D) {
+        // Touche de déplacement "droite"
+        else if (keyCode == KeyEvent.VK_D) {
             rightPressed = true;
         }
 
-        //DEBUG
-
-        if(keyCode == KeyEvent.VK_T){
+        // Touche de débogage
+        if (keyCode == KeyEvent.VK_T) {
             debugKey = true;
         }
 
-        //PAUSING THE GAME
-
-        if (keyCode == KeyEvent.VK_P){
+        // Pause du jeu
+        if (keyCode == KeyEvent.VK_P) {
             gamePanel.gameState = gamePanel.gameState == gamePanel.pauseState ? gamePanel.playState : gamePanel.pauseState;
         }
     }
 
+    /**
+     * Gère les actions à effectuer lorsqu'une touche est relâchée.
+     * Cette méthode est appelée automatiquement lorsqu'une touche du clavier est relâchée.
+     *
+     * @param e l'événement KeyEvent représentant la touche relâchée.
+     */
     @Override
     public void keyReleased(KeyEvent e) {
         int keyCode = e.getKeyCode();
 
-        if(keyCode == KeyEvent.VK_Z) {
+        // Touche de déplacement "haut"
+        if (keyCode == KeyEvent.VK_Z) {
             upPressed = false;
         }
-        if(keyCode == KeyEvent.VK_S) {
+        // Touche de déplacement "bas"
+        if (keyCode == KeyEvent.VK_S) {
             downPressed = false;
         }
-        if(keyCode == KeyEvent.VK_Q) {
+        // Touche de déplacement "gauche"
+        if (keyCode == KeyEvent.VK_Q) {
             leftPressed = false;
         }
-        if(keyCode == KeyEvent.VK_D) {
+        // Touche de déplacement "droite"
+        if (keyCode == KeyEvent.VK_D) {
             rightPressed = false;
         }
-        //DEBUG
-        if(keyCode == KeyEvent.VK_T){
+
+        // Touche de débogage
+        if (keyCode == KeyEvent.VK_T) {
             debugKey = false;
         }
     }
