@@ -1,3 +1,3 @@
 # 2DGame
 
-Doc : slam.gowey.fr
+Doc : http://slam.gowey.fr
