@@ -7,6 +7,9 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.text.DecimalFormat;
 
+/**
+ * Cette classe gère l'interface utilisateur du jeu.
+ */
 public class UI {
 
     Graphics2D g2d;
@@ -21,12 +24,15 @@ public class UI {
     double playTime;
     DecimalFormat df = new DecimalFormat("#0.00");
 
-
     BufferedImage healthIcon;
 
     public boolean messageOn = false;
     public String message = "";
 
+    /**
+     * Constructeur de la classe UI.
+     * @param gamePanel Le panneau de jeu associé à l'interface utilisateur.
+     */
     public UI(GamePanel gamePanel){
         this.gamePanel= gamePanel;
         this.ARIAL_20  = new Font("Arial", Font.BOLD, 20);
@@ -35,18 +41,23 @@ public class UI {
         this.ARIAL_50  = new Font("Arial", Font.BOLD, 50);
         this.ARIAL_70  = new Font("Arial", Font.BOLD, 70);
         healthIcon = HealthItemObject.icon;
-
     }
 
+    /**
+     * Affiche un message à l'écran.
+     * @param message Le message à afficher.
+     */
     public void showMessage(String message){
         this.message = message;
         messageOn = true;
     }
 
+    /**
+     * Dessine l'interface utilisateur.
+     * @param g2d L'objet Graphics2D utilisé pour le rendu graphique.
+     */
     public void draw(Graphics2D g2d){
         this.g2d = g2d;
-
-
 
         if(gamePanel.gameState == gamePanel.playState){
             g2d.setFont(ARIAL_20);
@@ -58,7 +69,6 @@ public class UI {
             playTime+= (double)1/60;
             g2d.drawString("Temps : "+df.format(playTime)+"s", gamePanel.tileSize*12,55);
 
-
             if(messageOn){
                 g2d.drawString(message, gamePanel.screenWidth/2 - 100, gamePanel.tileSize*3);
                 messageCounter++;
@@ -69,13 +79,13 @@ public class UI {
             }
         }
         if(gamePanel.gameState == gamePanel.pauseState){
-
             drawPauseScreen();
         }
-
-
     }
 
+    /**
+     * Dessine l'écran de pause.
+     */
     public void drawPauseScreen()
     {
         String pauseIcon = "| |";
@@ -91,9 +101,12 @@ public class UI {
         g2d.drawString(text,x,y);
     }
 
+    /**
+     * Calcule la position x pour centrer un texte.
+     * @param message Le texte à centrer.
+     * @return La position x pour centrer le texte.
+     */
     public int getXforCenterText(String message){
         return gamePanel.screenWidth/2 - ((int)g2d.getFontMetrics().getStringBounds(message, g2d).getWidth()) /2;
-
     }
 }
-
